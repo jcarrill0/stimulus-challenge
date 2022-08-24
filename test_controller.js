@@ -25,7 +25,7 @@ Stimulus.register("test", class extends Controller {
 
     handleMXNPhoneChange() {
         IMask(this.MXNPhoneTarget, {
-            mask: '+{7}(000)000-00-00'
+            mask: '+(00) 000 0000000'
         })
     }
 })
