@@ -17,9 +17,24 @@
         <label for="">CRC Phone</label>
         <input type="text" data-test-target="CRCPhone" data-action="input->test#handleCRCPhoneChange" >
       </div>
-  </div>
+    </div>
 
-    <script src="https://unpkg.com/imask@6.4.2/dist/imask.js"></script>
-    <script src="./test_controller.js  " type="module"></script>
+    <div data-controller="test">
+      <div class="input-box">
+        <!-- ALBANIA -->
+        <label for="">ALB Phone</label>
+        <input type="text" data-test-target="ALBPhone" data-action="input->test#handleALBPhoneChange" >
+      </div>
+    </div>
+
+    <div data-controller="test">
+      <div class="input-box">
+        <label for="">MXN Phone</label>
+        <input type="text" data-test-target="MXNPhone" data-action="input->test#handleMXNPhoneChange" >
+      </div>
+    </div>
+
+  <script src="https://unpkg.com/imask@6.4.2/dist/imask.js"></script>
+  <script src="./test_controller.js  " type="module"></script>
 </body>
 </html>
