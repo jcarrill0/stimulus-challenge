@@ -6,7 +6,7 @@ Stimulus.register("hello", class extends Controller {
     static targets = [ "name", "output" ]
 
     connect() {
-        console.log(`Hello, World!`) 
+        console.log(`Hello, World!!!`) 
     } 
 
     greet() { 
