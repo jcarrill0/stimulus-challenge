@@ -6,16 +6,19 @@
 </head>
 <body>
     <div data-controller="test">
-        <span data-test-target="message">Message</span>
+        <!-- <span data-test-target="message">Message</span> -->
         <div class="input-box">
           <label for="">USA Phone</label>
           <input type="text" data-test-target="USAPhone" data-action="input->test#handleUSAPhoneChange">
         </div>
-        <div class="input-box">
-          <label for="">CRC Phone</label>
-          <input type="text" data-test-target="CRCPhone" data-action="input->test#handleCRCPhoneChange" >
-        </div>
     </div>
+
+    <div data-controller="test">
+      <div class="input-box">
+        <label for="">CRC Phone</label>
+        <input type="text" data-test-target="CRCPhone" data-action="input->test#handleCRCPhoneChange" >
+      </div>
+  </div>
 
     <script src="https://unpkg.com/imask@6.4.2/dist/imask.js"></script>
     <script src="./test_controller.js  " type="module"></script>

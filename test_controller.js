@@ -3,11 +3,11 @@ import { Application, Controller } from "https://unpkg.com/@hotwired/stimulus/di
 window.Stimulus = Application.start()
 
 Stimulus.register("test", class extends Controller {
-    static targets = [ "message", "USAPhone", "CRCPhone" ]
+    static targets = ["USAPhone", "CRCPhone"]
 
-    connect() {
+    /* connect() {
         console.log(this.message)
-    } 
+    }  */
 
     handleUSAPhoneChange() {
         IMask(this.USAPhoneTarget, {
@@ -21,7 +21,7 @@ Stimulus.register("test", class extends Controller {
         })
     }
     
-    get message() {
+    /* get message() {
         return this.messageTarget.textContent
-    }
+    } */
 })
