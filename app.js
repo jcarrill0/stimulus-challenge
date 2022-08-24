@@ -5,14 +5,12 @@ window.Stimulus = Application.start()
 Stimulus.register("hello", class extends Controller {
     static targets = [ "name", "output" ]
 
-    /* connect() {
-        this.outputTarget.textContent = `Hello, ${this.name}!`;
-    } */
+    connect() {
+        console.log(`Hello, World!`) 
+    } 
 
     greet() { 
-        let msg = `Hello, ${this.name}!`;
-        console.log(msg) 
-        this.outputTarget.textContent = msg
+        this.outputTarget.textContent = `Hello, ${this.name}!`
     }
     
     get name() {
