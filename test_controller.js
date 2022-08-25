@@ -5,12 +5,12 @@ window.Stimulus = Application.start()
 Stimulus.register("test", class extends Controller {
     static targets = ["phone"]
 
-
     connect(){
         IMask(this.phoneTarget, {
             mask: this.getFormat()
         })
     }
+    
     getFormat(){
         const format = {
             usa: '(000) 000-0000',
