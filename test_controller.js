@@ -6,10 +6,19 @@ Stimulus.register("test", class extends Controller {
     static targets = ["phone"]
 
     handleChangeInput(){
-        let formatMask = this.phoneTarget.dataset.formatMask
-
         IMask(this.phoneTarget, {
-            mask: formatMask
+            mask: this.getFormat()
         })
+    }
+
+    getFormat(){
+        const format = {
+            usa: '(000) 000-0000',
+            crc: '+(000) 0000-0000',
+            alb: '+(000) 00 000 0000',
+            mxn: '+(00) 000 0000000'
+        }
+
+        return format[this.phoneTarget.name]
     }
 })

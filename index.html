@@ -8,7 +8,7 @@
     <div data-controller="test" >
         <div class="input-box">
           <label for="">USA Phone</label>
-          <input type="text" data-test-target="phone" 
+          <input type="text" name="usa" data-test-target="phone" 
           data-format-mask="(000) 000-0000"
           data-action="input->test#handleChangeInput">
         </div>
@@ -17,7 +17,7 @@
     <div data-controller="test">
       <div class="input-box">
         <label for="">CRC Phone</label>
-        <input type="text" data-test-target="phone" 
+        <input type="text" name ="crc" data-test-target="phone" 
         data-format-mask="+(000) 0000-0000"
         data-action="input->test#handleChangeInput" >
       </div>
@@ -27,14 +27,14 @@
       <div class="input-box">
         <!-- ALBANIA -->
         <label for="">ALB Phone</label>
-        <input type="text" data-test-target="phone" data-format-mask="+(000) 00 000 0000" data-action="input->test#handleChangeInput" >
+        <input type="text" name="alb" data-test-target="phone" data-format-mask="+(000) 00 000 0000" data-action="input->test#handleChangeInput" >
       </div>
     </div>
 
     <div data-controller="test">
       <div class="input-box">
         <label for="">MXN Phone</label>
-        <input type="text" data-test-target="phone" data-format-mask="+(00) 000 0000000" data-action="input->test#handleChangeInput">
+        <input type="text" name="mxn" data-test-target="phone" data-format-mask="+(00) 000 0000000" data-action="input->test#handleChangeInput">
       </div>
     </div>
 
