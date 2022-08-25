@@ -5,6 +5,10 @@ window.Stimulus = Application.start()
 Stimulus.register("test", class extends Controller {
     static targets = ["phone"]
 
+    static values = {
+        format: String
+    }
+
     connect(){
         IMask(this.phoneTarget, {
             mask: this.getFormat()
@@ -18,7 +22,6 @@ Stimulus.register("test", class extends Controller {
             alb: '+(000) 00 000 0000',
             mxn: '+(00) 000 0000000'
         }
-
-        return format[this.phoneTarget.name]
+        return format[this.formatValue]
     }
 })
