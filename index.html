@@ -5,17 +5,21 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div data-controller="test">
+    <div data-controller="test" >
         <div class="input-box">
           <label for="">USA Phone</label>
-          <input type="text" data-test-target="USAPhone" data-action="input->test#handleUSAPhoneChange">
+          <input type="text" data-test-target="phone" 
+          data-format-mask="(000) 000-0000"
+          data-action="input->test#handleChangeInput">
         </div>
     </div>
 
     <div data-controller="test">
       <div class="input-box">
         <label for="">CRC Phone</label>
-        <input type="text" data-test-target="CRCPhone" data-action="input->test#handleCRCPhoneChange" >
+        <input type="text" data-test-target="phone" 
+        data-format-mask="+(000) 0000-0000"
+        data-action="input->test#handleChangeInput" >
       </div>
     </div>
 
@@ -23,14 +27,14 @@
       <div class="input-box">
         <!-- ALBANIA -->
         <label for="">ALB Phone</label>
-        <input type="text" data-test-target="ALBPhone" data-action="input->test#handleALBPhoneChange" >
+        <input type="text" data-test-target="phone" data-format-mask="+(000) 00 000 0000" data-action="input->test#handleChangeInput" >
       </div>
     </div>
 
     <div data-controller="test">
       <div class="input-box">
         <label for="">MXN Phone</label>
-        <input type="text" data-test-target="MXNPhone" data-action="input->test#handleMXNPhoneChange" >
+        <input type="text" data-test-target="phone" data-format-mask="+(00) 000 0000000" data-action="input->test#handleChangeInput">
       </div>
     </div>
 

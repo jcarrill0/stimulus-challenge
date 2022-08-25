@@ -3,29 +3,13 @@ import { Application, Controller } from "https://unpkg.com/@hotwired/stimulus/di
 window.Stimulus = Application.start()
 
 Stimulus.register("test", class extends Controller {
-    static targets = ["USAPhone", "CRCPhone", "ALBPhone", "MXNPhone"]
+    static targets = ["phone"]
 
-    handleUSAPhoneChange() {
-        IMask(this.USAPhoneTarget, {
-            mask: '(000) 000-0000'
-        })
-    }
+    handleChangeInput(){
+        let formatMask = this.phoneTarget.dataset.formatMask
 
-    handleCRCPhoneChange() {
-        IMask(this.CRCPhoneTarget, {
-            mask: '+(000) 0000-0000'
-        })
-    }
-
-    handleALBPhoneChange() {
-        IMask(this.ALBPhoneTarget, {
-            mask: '+(000) 00 000 0000'
-        })
-    }
-
-    handleMXNPhoneChange() {
-        IMask(this.MXNPhoneTarget, {
-            mask: '+(00) 000 0000000'
+        IMask(this.phoneTarget, {
+            mask: formatMask
         })
     }
 })
